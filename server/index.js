@@ -6,8 +6,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+let friends = ["Nitin", "Eric", "Jeddy", "Cameron", "Riley"];
+
 app.get("/api/users", (req, res) => {
-    let friends = ["Nitin", "Eric", "Jeddy", "Cameron", "Riley"];
+    console.log(req)
     res.status(200).send(friends);
 });
 
